@@ -11,7 +11,7 @@
 
 .bannerContent {
     position: absolute;
-    top: 7rem;
+    top: 8rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -43,6 +43,10 @@
     font-weight: 900;
 }
 
+.bannerContent2 {
+    top: 6rem;
+}
+
 .bannerContent2 p {
     font-family: "Bombing";
     color: #0D98E6;
@@ -56,7 +60,7 @@
 .bannerContent2 h1 {
     font-family: "Bombing";
     color: #181818;
-    font-size: 4.5rem;
+    font-size: 5rem;
     line-height: 3.5rem;
     font-weight: 500;
 }

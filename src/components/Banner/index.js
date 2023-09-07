@@ -29,7 +29,7 @@ const Banner = () => {
                     <img src={require("assets/banner2.png")} className={styles.bannerImg} alt="Banner com uma foto de café."></img>
                     <div className={`${styles.bannerContent} ${styles.bannerContent2}`}>
                         <p>Lançamento!</p>
-                        <h1>Cafe Designer - 500ml</h1>
+                        <h1>Cafe Designer <br/>- 500ml</h1>
                     </div>
                     <button className={styles.button}>Veja mais</button>
                 </Swiper.Item>
