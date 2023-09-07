@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 1rem 1.25rem;
+    position: fixed;
+    z-index: 999;
+}
+
+.headerIcons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}

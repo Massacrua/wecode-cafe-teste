@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "Bombing";
+    src: 
+        url("../../assets/webfontkit-bombing/bombing-webfont.woff2") format("woff2"),
+        url("../../assets/webfontkit-bombing/bombing-webfont.woff") format("woff");
+}
+
+.bannerImg {
+    width: 100%;
+}
+
+.bannerContent {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.bannerContent h1 {
+    color: #DBFF00;
+    font-size: 3rem;
+    font-family: "Roboto Mono";
+    font-weight: 700;
+    line-height: 3.5rem;
+    margin: 0;
+}
+
+.bannerContent img {
+    margin: 0;
+}
+
+.bannerContent p {
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: Raleway;
+}
+
+.bannerContent p strong {
+    font-weight: 900;
+}
+
+.bannerContent2 p {
+    font-family: "Bombing";
+    color: #0D98E6;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bannerContent2 h1 {
+    font-family: "Bombing";
+    color: #181818;
+    font-size: 4.5rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+}
+
+.button {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+
+    padding: 0.9rem 1.5rem;
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 4rem;
+    font-size: 1.125rem;
+
+    font-family: Raleway;
+    font-weight: 200;
+}
