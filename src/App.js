@@ -1,6 +1,6 @@
 import Banner from 'components/Banner';
 import CategorySection from 'components/CategorySection';
-import FavoritesSection from 'components/ProductSection';
+import ProductSection from 'components/ProductSection';
 import Header from 'components/Header';
 import { useEffect, useState } from 'react';
 
@@ -26,7 +26,7 @@ function App() {
       <Header scrolledDown={scrolledDown}/>
       <Banner />
       <CategorySection />
-      {/* <FavoritesSection /> */}
+      {/* <ProductSection /> */}
     </div>
   );
 }

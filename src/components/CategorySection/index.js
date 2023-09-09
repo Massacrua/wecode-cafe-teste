@@ -17,6 +17,11 @@ const CategorySection = () => {
             id: 2,
             img: require("assets/ferramentas-de-fazer-cafe.png"),
             name: "Kits"
+        },
+        {
+            id: 3,
+            img: require("assets/amigos-cafe.png"),
+            name: "Wecoffee Club+"
         }
     ]
     return (
