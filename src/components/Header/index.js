@@ -9,26 +9,8 @@ import { ReactComponent as MenuButton2 } from "assets/menu2.svg"
 import { ReactComponent as CartButton2 } from "assets/cart2.svg"
 import { ReactComponent as SearchButton2 } from "assets/search2.svg"
 import { ReactComponent as UserButton2 } from "assets/user2.svg"
-import { useEffect, useState } from "react"
 
-const Header = () => {
-
-    const [scrolledDown, setScrolledDown] = useState()
-
-    useEffect(() => {
-        const handleScroll = () => {
-            window.scrollY ?
-                setScrolledDown(true) :
-                setScrolledDown(false)
-        };
-
-        window.addEventListener('scroll', handleScroll)
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    })
-    
+const Header = ({ scrolledDown }) => {
     if (!scrolledDown) {
         return (
             <header className={styles.header}>
