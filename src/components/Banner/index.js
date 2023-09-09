@@ -5,6 +5,7 @@ const Banner = () => {
     return (
         <div>
             <Swiper 
+                style={{position: "relative"}}
                 autoplay 
                 loop 
                 autoplayInterval={5000}
@@ -15,10 +16,17 @@ const Banner = () => {
                     "--dot-size": "6px",
                     "--dot-border-radius": "6px",
                     "--dot-spacing": "4px",
+                    position: "absolute",
+                    right: "calc(45vw - 2rem)",
+                    bottom: "2rem"
                 }}}
             >
                 <Swiper.Item>
-                    <img src={require("assets/banner1.png")} className={styles.bannerImg} alt="Banner com uma foto de café."></img>
+                    <img 
+                        src={require("assets/banner1.png")} 
+                        className={styles.bannerImg} 
+                        alt="Banner com uma foto de café."
+                    />
                     <div className={styles.bannerContent}>
                         <h1>.[Café Dev]; 500ml</h1>
                         <p>com <strong>10% OFF</strong></p>
@@ -26,8 +34,15 @@ const Banner = () => {
                     <button className={styles.button}>Veja mais</button>
                 </Swiper.Item>
                 <Swiper.Item>
-                    <img src={require("assets/banner2.png")} className={styles.bannerImg} alt="Banner com uma foto de café."></img>
-                    <div className={`${styles.bannerContent} ${styles.bannerContent2}`}>
+                    <img 
+                        src={require("assets/banner2.png")} 
+                        className={styles.bannerImg} 
+                        alt="Banner com uma foto de café."
+                    />
+                    <div className={`
+                        ${styles.bannerContent} 
+                        ${styles.bannerContent2}
+                    `}>
                         <p>Lançamento!</p>
                         <h1>Cafe Designer <br/>- 500ml</h1>
                     </div>

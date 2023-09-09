@@ -14,3 +14,8 @@
     gap: 1rem;
     align-items: center;
 }
+
+.scrolledHeader {
+    background-color: rgba(255, 255, 255, 0.90);
+    border-radius: 0 0 5px 5px;
+}
