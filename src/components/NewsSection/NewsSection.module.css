@@ -12,3 +12,17 @@
     flex-direction: column;
     gap: 1.5rem;
 }
+
+.newsList {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1.25rem;
+    overflow-y: scroll;
+}
+
+.nav {
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

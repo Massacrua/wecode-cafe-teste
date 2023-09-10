@@ -21,7 +21,7 @@ const CategorySection = () => {
         {
             id: 3,
             img: require("assets/amigos-cafe.png"),
-            name: "Wecoffee Club+"
+            name: <a href='#'>Wecoffee Club+</a>
         }
     ]
     return (

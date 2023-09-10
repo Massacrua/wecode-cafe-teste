@@ -1,0 +1,27 @@
+.article {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: Raleway;
+}
+
+.article img {
+    max-width: 10.5rem;
+    height: 7rem;
+}
+
+.article h3 {
+    font-weight: 800;
+}
+
+.article p {
+    font-size: 0.75rem;
+    color: #353A42;
+    font-weight: 300;
+}
+
+.article a {
+    font-size: 0.75rem;
+    color: #181818;
+}
