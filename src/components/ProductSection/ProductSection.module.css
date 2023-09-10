@@ -1,6 +1,39 @@
 .section {
-    padding: 3rem 1.25rem;
+    padding: 3rem 0;
     display: flex;
     gap: 1.5rem;
     flex-direction: column;
+    font-family: Raleway;
+}
+
+.titles {
+    padding: 0 1.25rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.section h2 {
+    font-weight: 300;
+    color: #353A42;
+    font-size: 1rem;
+}
+
+.productList {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    overflow: scroll;
+    padding: 0 1.25rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.productList::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.productList {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
 }

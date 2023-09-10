@@ -1,0 +1,14 @@
+.section {
+    padding: 3rem 0;
+    background-color: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.titles {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}

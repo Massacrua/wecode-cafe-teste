@@ -1,5 +1,7 @@
 import Product from "components/Product"
 import styles from "./ProductSection.module.css"
+import SectionTitle from "components/SectionTitle"
+import SectionSubtitle from "components/SectionSubtitle"
 
 const ProductSection = () => {
     const products = [
@@ -21,8 +23,10 @@ const ProductSection = () => {
 
     return (
         <section className={styles.section}>
-            <h1>Os favoritos da casa</h1>
-            <h2>Conheça os cafés queridinhos da galera!</h2>
+            <div className={styles.titles}>
+                <SectionTitle>Os favoritos da casa</SectionTitle>
+                <SectionSubtitle>Conheça os cafés queridinhos da galera!</SectionSubtitle>
+            </div>
             <div className={styles.productList}>
                 {products.map(product => 
                     <Product 

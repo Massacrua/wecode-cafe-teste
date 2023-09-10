@@ -3,6 +3,7 @@ import CategorySection from 'components/CategorySection';
 import ProductSection from 'components/ProductSection';
 import Header from 'components/Header';
 import { useEffect, useState } from 'react';
+import NewsSection from 'components/NewsSection';
 
 function App() {
 
@@ -26,7 +27,8 @@ function App() {
       <Header scrolledDown={scrolledDown}/>
       <Banner />
       <CategorySection />
-      {/* <ProductSection /> */}
+      <ProductSection />
+      <NewsSection />
     </div>
   );
 }
