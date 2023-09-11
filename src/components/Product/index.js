@@ -1,9 +1,27 @@
 import styles from "./Product.module.css"
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
-const Product = ({ product }) => {
+const Product = ({ product, favoriteItem }) => {
+    
+    const setFavorite = () => {
+        favoriteItem(product.id)
+    }
+
+    const starProps = {
+        size: 25,
+        color: "#FFF",
+        onClick: setFavorite
+    }
+    
     return (
         <div className={styles.product}>
-            <img src={product.img}>
+            <div className={styles.favorite}>
+                {product.favorite
+                    ? <AiFillStar {...starProps}/>
+                    : <AiOutlineStar {...starProps}/>
+                }
+            </div>
+            <img src={product.img} alt={product.name}>
             </img>
             <h3>
                 {product.name}

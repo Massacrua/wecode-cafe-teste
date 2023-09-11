@@ -4,6 +4,7 @@ import ProductSection from 'components/ProductSection';
 import Header from 'components/Header';
 import { useEffect, useState } from 'react';
 import NewsSection from 'components/NewsSection';
+import Footer from "components/Footer";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <CategorySection />
       <ProductSection />
       <NewsSection />
+      <Footer />
     </div>
   );
 }

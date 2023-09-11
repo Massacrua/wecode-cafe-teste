@@ -20,9 +20,17 @@
     overflow-y: scroll;
 }
 
-.nav {
-    padding: 0 1.25rem;
+.arrows {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
+    position: relative;
+    right: 1.25rem;
+    bottom: 2.15rem;
+    justify-content: flex-end;
+
+}
+
+.swiperItem {
+    display: flex;
+    gap: 1rem;
 }

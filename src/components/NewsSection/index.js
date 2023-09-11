@@ -2,8 +2,9 @@ import SectionTitle from "components/SectionTitle"
 import styles from "./NewsSection.module.css"
 import SectionSubtitle from "components/SectionSubtitle"
 import NewsArticle from "components/NewsArticle"
-import { PageIndicator } from "antd-mobile"
-import { useLayoutEffect, useRef, useState } from "react"
+import { Swiper } from "antd-mobile"
+import { ReactComponent as ArrowLeft } from "assets/arrow-left.svg"
+import { ReactComponent as ArrowRight } from "assets/arrow-right.svg"
 
 const NewsSection = () => {
     const news = [
@@ -33,44 +34,55 @@ const NewsSection = () => {
         }
     ]
 
-// Tentando fazer a bolinha do scroll
-
-    const ref = useRef(null)
-    const [listWidth, setListWidth] = useState(0)
-    useLayoutEffect(() => {
-        setListWidth(ref.current)
-        console.log(listWidth)
-    })
-
-    const [scrollPos, setScrollPos] = useState(0)
-    const handleScroll = event => {
-        setScrollPos(event.currentTarget.scrollLeft)
-        // console.log(event.currentTarget.scrollLeft)
-        const scrolled = (listWidth / scrollPos)
-        // console.log(scrolled)
-    };
-
     return (
         <section className={styles.section}>
             <div className={styles.titles}>
                 <SectionTitle>Conheça mais</SectionTitle>
                 <SectionSubtitle>Fique por dentro de tudo que acontece no universo cafeeiro</SectionSubtitle>
             </div>
-            <div className={styles.newsList} onScroll={event => handleScroll(event)} ref={ref}>
-                {news.map(article => <NewsArticle key={article.id} article={article}/>)}
-            </div>
-            <div className={styles.nav}>
-                <PageIndicator total={2} current={0} style={{
+            <div className={styles.newsList}>
+            <Swiper 
+                style={{position: "relative"}}
+                indicatorProps={{style:{
                     "--active-dot-color": "#353A42",
-                    "--dot-color": "#8A8A8A ",
+                    "--dot-color": "#8A8A8A",
                     "--active-dot-size": "6px",
                     "--dot-size": "6px",
                     "--dot-border-radius": "6px",
                     "--dot-spacing": "4px",
-                }}/>
-                <div className={styles.arrows}>
-
-                </div>
+                    position: "absolute",
+                    right: "calc(45vw - 1.5rem)"
+                }}}
+            >
+                <Swiper.Item className={styles.swiperItem}>
+                    <NewsArticle    
+                        title={news[0].title}
+                        preview={news[0].preview}
+                        img={news[0].img}
+                    />
+                    <NewsArticle    
+                        title={news[1].title}
+                        preview={news[1].preview}
+                        img={news[1].img}
+                    />
+                </Swiper.Item>
+                <Swiper.Item className={styles.swiperItem}>
+                    <NewsArticle    
+                        title={news[2].title}
+                        preview={news[2].preview}
+                        img={news[2].img}
+                    />
+                    <NewsArticle    
+                        title={news[3].title}
+                        preview={news[3].preview}
+                        img={news[3].img}
+                    />
+                </Swiper.Item>
+            </Swiper>
+            </div>
+            <div className={styles.arrows}>
+                <ArrowLeft />
+                <ArrowRight />
             </div>
         </section>
     )
