@@ -4,7 +4,7 @@ import SectionTitle from "components/SectionTitle"
 import SectionSubtitle from "components/SectionSubtitle"
 import { useState } from "react"
 
-const ProductSection = () => {
+const ProductSection = ({ addToCart }) => {
     
     const [products, setProducts] = useState([
         {
@@ -34,6 +34,10 @@ const ProductSection = () => {
         }))
     }
 
+    const addItemToCart = product => {
+        addToCart(product)
+    }
+
     return (
         <section className={styles.section}>
             <div className={styles.titles}>
@@ -46,6 +50,7 @@ const ProductSection = () => {
                         product={product} 
                         key={product.id}
                         favoriteItem={toggleFavorite}
+                        addToCart={addItemToCart}
                     />
                 )}
             </div>

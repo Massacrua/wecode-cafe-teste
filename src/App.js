@@ -11,9 +11,9 @@ function App() {
   const [scrolledDown, setScrolledDown] = useState()
   useEffect(() => {
       const handleScroll = () => {
-          window.scrollY ?
-          setScrolledDown(true) :
-          setScrolledDown(false)
+          window.scrollY 
+          ? setScrolledDown(true) 
+          : setScrolledDown(false)
       };
 
       window.addEventListener('scroll', handleScroll)
@@ -23,12 +23,17 @@ function App() {
       }
   })
 
+  const addItemToCart = product => product
+
   return (
     <div className="App">
-      <Header scrolledDown={scrolledDown}/>
+      <Header 
+        scrolledDown={scrolledDown} 
+        itemToAddToCart={addItemToCart}
+      />
       <Banner />
       <CategorySection />
-      <ProductSection />
+      <ProductSection addToCart={addItemToCart} />
       <NewsSection />
       <Footer />
     </div>

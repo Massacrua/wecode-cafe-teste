@@ -72,7 +72,7 @@ const NewsSection = () => {
                         preview={news[2].preview}
                         img={news[2].img}
                     />
-                    <NewsArticle    
+                    <NewsArticle  
                         title={news[3].title}
                         preview={news[3].preview}
                         img={news[3].img}

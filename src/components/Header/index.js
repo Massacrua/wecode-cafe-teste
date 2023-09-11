@@ -9,8 +9,14 @@ import { ReactComponent as MenuButton2 } from "assets/menu2.svg"
 import { ReactComponent as CartButton2 } from "assets/cart2.svg"
 import { ReactComponent as SearchButton2 } from "assets/search2.svg"
 import { ReactComponent as UserButton2 } from "assets/user2.svg"
+import { useState } from "react"
 
-const Header = ({ scrolledDown }) => {
+
+const Header = ({ scrolledDown, itemToAddToCart }) => {
+    const [cartCounter, setCartCounter] = useState([{}])
+
+    const addItemToCart = () => console.log(itemToAddToCart)
+
     if (!scrolledDown) {
         return (
             <header className={styles.header}>
@@ -38,7 +44,9 @@ const Header = ({ scrolledDown }) => {
             <Logo2 className={styles.logo}/>
             <div className={styles.headerIcons}>
                 <UserButton2/>
-                <CartButton2/>
+                <CartButton2>
+                    <span></span>
+                </CartButton2>
             </div>
         </header>
     )
