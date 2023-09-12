@@ -5,8 +5,15 @@ import Header from 'components/Header';
 import { useEffect, useState } from 'react';
 import NewsSection from 'components/NewsSection';
 import Footer from "components/Footer";
+import SideMenu from 'components/SideMenu';
 
 function App() {
+
+  const [shoppingCart, setShoppingCart] = useState([])
+
+  const addItemToCart = product => {
+    setShoppingCart([...shoppingCart, product])
+  }
 
   const [scrolledDown, setScrolledDown] = useState()
   useEffect(() => {
@@ -23,13 +30,21 @@ function App() {
       }
   })
 
-  const addItemToCart = product => product
+  const [menuOpen, setMenuOpen] = useState(false)
+  const openMenu = () => {
+    setMenuOpen(true)
+  }
 
   return (
     <div className="App">
+      <SideMenu 
+        isOpen={menuOpen}
+        onStateChange={state => setMenuOpen(state.menuOpen)}
+      />
       <Header 
         scrolledDown={scrolledDown} 
-        itemToAddToCart={addItemToCart}
+        cartItems={shoppingCart.length}
+        openMenu={openMenu}
       />
       <Banner />
       <CategorySection />

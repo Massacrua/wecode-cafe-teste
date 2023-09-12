@@ -4,30 +4,26 @@ import { ReactComponent as MenuButton } from "assets/menu.svg"
 import { ReactComponent as CartButton } from "assets/cart.svg"
 import { ReactComponent as SearchButton } from "assets/search.svg"
 import { ReactComponent as UserButton } from "assets/user.svg"
-import { ReactComponent as Logo2 } from "assets/logo2.svg"
-import { ReactComponent as MenuButton2 } from "assets/menu2.svg"
-import { ReactComponent as CartButton2 } from "assets/cart2.svg"
-import { ReactComponent as SearchButton2 } from "assets/search2.svg"
-import { ReactComponent as UserButton2 } from "assets/user2.svg"
-import { useState } from "react"
+import { ReactComponent as BlackLogo } from "assets/logo2.svg"
+import { ReactComponent as BlackMenuButton } from "assets/menu2.svg"
+import { ReactComponent as BlackCartButton } from "assets/cart2.svg"
+import { ReactComponent as BlackSearchButton } from "assets/search2.svg"
+import { ReactComponent as BlackUserButton } from "assets/user2.svg"
 
-
-const Header = ({ scrolledDown, itemToAddToCart }) => {
-    const [cartCounter, setCartCounter] = useState([{}])
-
-    const addItemToCart = () => console.log(itemToAddToCart)
+const Header = ({ scrolledDown, cartItems, openMenu }) => {
 
     if (!scrolledDown) {
         return (
             <header className={styles.header}>
                 <div className={styles.headerIcons}>
-                    <MenuButton/>
+                    <MenuButton onClick={() => openMenu()}/>
                     <SearchButton/>
                 </div>
                 <Logo className={styles.logo}/>
                 <div className={styles.headerIcons}>
                     <UserButton/>
                     <CartButton/>
+                    <span className={styles.cartItems}>{cartItems}</span>
                 </div>
             </header>
         ) 
@@ -38,15 +34,14 @@ const Header = ({ scrolledDown, itemToAddToCart }) => {
             ${styles.scrolledHeader}
         `}>
             <div className={styles.headerIcons}>
-                <MenuButton2/>
-                <SearchButton2/>
+                <BlackMenuButton onClick={() => openMenu()}/>
+                <BlackSearchButton/>
             </div>
-            <Logo2 className={styles.logo}/>
+            <BlackLogo className={styles.logo}/>
             <div className={styles.headerIcons}>
-                <UserButton2/>
-                <CartButton2>
-                    <span></span>
-                </CartButton2>
+                <BlackUserButton/>
+                <BlackCartButton/>
+                <span className={styles.cartItems}>{cartItems}</span>
             </div>
         </header>
     )

@@ -1,6 +1,7 @@
 import styles from "./Product.module.css"
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { ReactComponent as AddToCart } from "assets/add-to-cart.svg"
+import { Toast } from "antd-mobile"
 
 const Product = ({ product, favoriteItem, addToCart }) => {
     
@@ -10,6 +11,11 @@ const Product = ({ product, favoriteItem, addToCart }) => {
 
     const addItemToCart = () => {
         addToCart(product)
+        Toast.show({
+            content: "Adicionado ao carrinho",
+            duration: 3000,
+            position: "bottom"
+        })
     }
 
     const starProps = {
@@ -28,7 +34,10 @@ const Product = ({ product, favoriteItem, addToCart }) => {
                         : <AiOutlineStar {...starProps}/>
                     }
                 </div>
-                <button className={styles.addToCart} onClick={addItemToCart}>
+                <button 
+                    className={styles.addToCart} 
+                    onClick={addItemToCart}
+                >
                     <AddToCart/>
                 </button>
             </div>

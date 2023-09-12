@@ -13,9 +13,20 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    position: relative;
 }
 
 .scrolledHeader {
     background-color: rgba(255, 255, 255, 0.90);
     border-radius: 0 0 5px 5px;
+}
+
+.cartItems {
+    position: absolute;
+    color: #FFF;
+    font-size: 0.625rem;
+    font-weight: 500;
+    right: 3px;
+    bottom: 0;
+    font-family: Raleway;
 }

@@ -7,6 +7,7 @@ const Banner = () => {
             <Swiper 
                 style={{position: "relative"}}
                 autoplay 
+                loop
                 autoplayInterval={5000}
                 indicatorProps={{style:{
                     "--active-dot-color": "#FFF",

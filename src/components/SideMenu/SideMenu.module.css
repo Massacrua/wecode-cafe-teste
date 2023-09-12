@@ -1,0 +1,32 @@
+.menu {
+    background-color: #FFF;
+    float: left;
+    position: fixed;
+    height: 100%;
+    font-family: Raleway;
+}
+
+.logo {
+    padding: 1.5rem 1.25rem;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner div {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.25rem;
+    color: #FFF;
+}
+
+.banner img {
+    width: 100%;
+    filter: brightness(65%);
+}
+
+.banner h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
