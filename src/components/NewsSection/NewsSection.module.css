@@ -34,3 +34,14 @@
     display: flex;
     gap: 1rem;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.newsList::-webkit-scrollbar {
+    display: none;
+  }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.newsList {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}

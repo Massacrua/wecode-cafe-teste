@@ -41,44 +41,44 @@ const NewsSection = () => {
                 <SectionSubtitle>Fique por dentro de tudo que acontece no universo cafeeiro</SectionSubtitle>
             </div>
             <div className={styles.newsList}>
-            <Swiper 
-                style={{position: "relative"}}
-                indicatorProps={{style:{
-                    "--active-dot-color": "#353A42",
-                    "--dot-color": "#8A8A8A",
-                    "--active-dot-size": "6px",
-                    "--dot-size": "6px",
-                    "--dot-border-radius": "6px",
-                    "--dot-spacing": "4px",
-                    position: "absolute",
-                    right: "calc(45vw - 1.5rem)"
-                }}}
-            >
-                <Swiper.Item className={styles.swiperItem}>
-                    <NewsArticle    
-                        title={news[0].title}
-                        preview={news[0].preview}
-                        img={news[0].img}
-                    />
-                    <NewsArticle    
-                        title={news[1].title}
-                        preview={news[1].preview}
-                        img={news[1].img}
-                    />
-                </Swiper.Item>
-                <Swiper.Item className={styles.swiperItem}>
-                    <NewsArticle    
-                        title={news[2].title}
-                        preview={news[2].preview}
-                        img={news[2].img}
-                    />
-                    <NewsArticle  
-                        title={news[3].title}
-                        preview={news[3].preview}
-                        img={news[3].img}
-                    />
-                </Swiper.Item>
-            </Swiper>
+                <Swiper 
+                    style={{position: "relative"}}
+                    indicatorProps={{style:{
+                        "--active-dot-color": "#353A42",
+                        "--dot-color": "#8A8A8A",
+                        "--active-dot-size": "6px",
+                        "--dot-size": "6px",
+                        "--dot-border-radius": "6px",
+                        "--dot-spacing": "4px",
+                        position: "absolute",
+                        right: "calc(45vw - 1.5rem)"
+                    }}}
+                >
+                    <Swiper.Item className={styles.swiperItem}>
+                        <NewsArticle    
+                            title={news[0].title}
+                            preview={news[0].preview}
+                            img={news[0].img}
+                        />
+                        <NewsArticle    
+                            title={news[1].title}
+                            preview={news[1].preview}
+                            img={news[1].img}
+                        />
+                    </Swiper.Item>
+                    <Swiper.Item className={styles.swiperItem}>
+                        <NewsArticle    
+                            title={news[2].title}
+                            preview={news[2].preview}
+                            img={news[2].img}
+                        />
+                        <NewsArticle  
+                            title={news[3].title}
+                            preview={news[3].preview}
+                            img={news[3].img}
+                        />
+                    </Swiper.Item>
+                </Swiper>
             </div>
             <div className={styles.arrows}>
                 <ArrowLeft />
