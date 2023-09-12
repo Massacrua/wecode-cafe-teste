@@ -114,7 +114,7 @@ const SideMenu = props => {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-                <a href='#'>Wecoffee Club+</a>
+                <a className={styles.wecoffeLink}>Wecoffee Club+</a>
             </div>
         </Menu>
     )
