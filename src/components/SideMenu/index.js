@@ -7,9 +7,25 @@ import { slide as Menu } from "react-burger-menu";
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
 
 const SideMenu = props => {
+    const typographyStyle = {
+        fontFamily: "Raleway",
+        border: "none",
+        color: "#181818",
+        fontWeight: "600",
+        ul: {
+            listStyleType: "none"
+        },
+        a: {
+            textDecoration: "underline",
+            color: "#181818",
+            fontSize: "0.875rem",
+            fontWeight: "400"
+        }
+    }
+
     return (
         <Menu 
-            width={"70%"}
+            width={"75%"}
             className={styles.menu}
             customCrossIcon={<AiOutlineClose color="#181818"/>}
             customBurgerIcon={false}
@@ -25,66 +41,81 @@ const SideMenu = props => {
                     <p>Perfeito para aquela madrugada de lançamento de jogo novo</p>
                 </div>
             </div>
-            <Accordion>
-                <AccordionSummary
-                    expandIcon={<MdExpandMore color="#181818" size={20}/>}
-                    aria-controls="panel1-content"
-                    id="panel1-header"
+            <div className={styles.accordions}>
+                <Accordion 
+                    defaultExpanded 
+                    disableGutters 
                 >
-                    <Typography>
-                        Cafés especiais
-                    </Typography>                   
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        <ul>
-                            <li><a>Café Cyborg</a></li>
-                            <li><a>Café Star Wars</a></li>
-                            <li><a>Café Dark Elf</a></li>
-                            <li><a>Ver todos</a></li>
-                        </ul>
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary
-                    expandIcon={<MdExpandMore color="#181818" size={20}/>}
-                    aria-controls="panel2-content"
-                    id="panel2-header"
+                    <AccordionSummary
+                        expandIcon={<MdExpandMore color="#181818" size={20}/>}
+                        aria-controls="panel1-content"
+                        id="panel1-header"
+                    >
+                        <Typography sx={typographyStyle}>
+                            Cafés especiais
+                        </Typography>                   
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography sx={typographyStyle}>
+                            <ul>
+                                <li><a>Café Cyborg</a></li>
+                                <li><a>Café Star Wars</a></li>
+                                <li><a>Café Dark Elf</a></li>
+                                <li><a>Ver todos</a></li>
+                            </ul>
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion >
+                <Accordion 
+                    disableGutters 
+                    classes={{
+                        root: styles.MuiAccordionroot
+                    }}
                 >
-                    <Typography>
-                        Cafés tradicionais
-                    </Typography>                   
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        <ul>
-                            <li><a>Café preto</a></li>
-                            <li><a>Café com leite</a></li>
-                        </ul>
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary
-                    expandIcon={<MdExpandMore color="#181818" size={20}/>}
-                    aria-controls="panel2-content"
-                    id="panel2-header"
+                    <AccordionSummary
+                        expandIcon={<MdExpandMore color="#181818" size={20}/>}
+                        aria-controls="panel2-content"
+                        id="panel2-header"
+                    >
+                        <Typography sx={typographyStyle}>
+                            Cafés tradicionais
+                        </Typography>                   
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography sx={typographyStyle}>
+                            <ul>
+                                <li><a>Café preto</a></li>
+                                <li><a>Café com leite</a></li>
+                            </ul>
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion 
+                    disableGutters 
+                    classes={{
+                        root: styles.MuiAccordionroot
+                    }}
                 >
-                    <Typography>
-                        Kits
-                    </Typography>                   
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        <ul>
-                            <li><a>Kit energético</a></li>
-                            <li><a>Kit de chás especiais</a></li>
-                        </ul>
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-            <a href='#'>Wecoffee Club+</a>
+                    <AccordionSummary
+                        expandIcon={<MdExpandMore color="#181818" size={20}/>}
+                        aria-controls="panel2-content"
+                        id="panel2-header"
+                    >
+                        <Typography sx={typographyStyle}>
+                            Kits
+                        </Typography>                   
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography sx={typographyStyle}>
+                            <ul>
+                                <li><a>Kit energético</a></li>
+                                <li><a>Kit de chás especiais</a></li>
+                            </ul>
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <a href='#'>Wecoffee Club+</a>
+            </div>
         </Menu>
     )
 }
