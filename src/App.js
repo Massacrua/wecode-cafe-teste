@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={"App"}>
       <SideMenu 
         isOpen={menuOpen}
         onStateChange={state => setMenuOpen(state.menuOpen)}

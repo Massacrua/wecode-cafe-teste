@@ -45,6 +45,10 @@ const SideMenu = props => {
                 <Accordion 
                     defaultExpanded 
                     disableGutters 
+                    sx={{boxShadow: "none"}}
+                    classes={{
+                        root: styles.MuiAccordionroot
+                    }}
                 >
                     <AccordionSummary
                         expandIcon={<MdExpandMore color="#181818" size={20}/>}
@@ -52,11 +56,11 @@ const SideMenu = props => {
                         id="panel1-header"
                     >
                         <Typography sx={typographyStyle}>
-                            Cafés especiais
+                            <span>Cafés especiais</span>
                         </Typography>                   
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography sx={typographyStyle}>
+                        <Typography sx={typographyStyle} component={"ul"}>
                             <ul>
                                 <li><a>Café Cyborg</a></li>
                                 <li><a>Café Star Wars</a></li>
@@ -68,6 +72,7 @@ const SideMenu = props => {
                 </Accordion >
                 <Accordion 
                     disableGutters 
+                    sx={{boxShadow: "none"}}
                     classes={{
                         root: styles.MuiAccordionroot
                     }}
@@ -78,11 +83,11 @@ const SideMenu = props => {
                         id="panel2-header"
                     >
                         <Typography sx={typographyStyle}>
-                            Cafés tradicionais
+                            <span>Cafés tradicionais</span>
                         </Typography>                   
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography sx={typographyStyle}>
+                        <Typography sx={typographyStyle} component={"ul"}>
                             <ul>
                                 <li><a>Café preto</a></li>
                                 <li><a>Café com leite</a></li>
@@ -92,6 +97,7 @@ const SideMenu = props => {
                 </Accordion>
                 <Accordion 
                     disableGutters 
+                    sx={{boxShadow: "none"}}
                     classes={{
                         root: styles.MuiAccordionroot
                     }}
@@ -102,11 +108,11 @@ const SideMenu = props => {
                         id="panel2-header"
                     >
                         <Typography sx={typographyStyle}>
-                            Kits
+                            <span>Kits</span>
                         </Typography>                   
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Typography sx={typographyStyle}>
+                        <Typography sx={typographyStyle} component={"ul"}>
                             <ul>
                                 <li><a>Kit energético</a></li>
                                 <li><a>Kit de chás especiais</a></li>
