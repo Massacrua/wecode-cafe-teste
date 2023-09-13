@@ -25,7 +25,7 @@ const SideMenu = props => {
 
     return (
         <Menu 
-            width={"75%"}
+            width={"319px"}
             className={styles.menu}
             customCrossIcon={<AiOutlineClose color="#181818"/>}
             customBurgerIcon={false}

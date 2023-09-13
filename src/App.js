@@ -1,3 +1,4 @@
+import "App.css"
 import Banner from 'components/Banner';
 import CategorySection from 'components/CategorySection';
 import ProductSection from 'components/ProductSection';
