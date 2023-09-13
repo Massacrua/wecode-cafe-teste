@@ -1,0 +1,24 @@
+.swiper-pagination-horizontal {
+    outline: 1px red solid;
+}
+
+.swiper-pagination-bullet {
+    background-color: #8A8A8A;
+    opacity: 100%;
+    width: 6px;
+    height: 6px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #353A42;
+}
+
+.swiper-button-prev {
+    outline: 1px red solid;
+
+}
+
+.swiper-button-next {
+    outline: 1px red solid;
+
+}

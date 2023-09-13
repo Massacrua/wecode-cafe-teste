@@ -2,9 +2,15 @@ import SectionTitle from "components/SectionTitle"
 import styles from "./NewsSection.module.css"
 import SectionSubtitle from "components/SectionSubtitle"
 import NewsArticle from "components/NewsArticle"
-import { Swiper } from "antd-mobile"
 import { ReactComponent as ArrowLeft } from "assets/arrow-left.svg"
 import { ReactComponent as ArrowRight } from "assets/arrow-right.svg"
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
+import { Pagination, Navigation, A11y } from "swiper/modules"
+
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "./SwiperStyle.css"
 
 const NewsSection = () => {
     const news = [
@@ -41,43 +47,40 @@ const NewsSection = () => {
                 <SectionSubtitle>Fique por dentro de tudo que acontece no universo cafeeiro</SectionSubtitle>
             </div>
             <div className={styles.newsList}>
-                <Swiper 
-                    style={{position: "relative"}}
-                    indicatorProps={{style:{
-                        "--active-dot-color": "#353A42",
-                        "--dot-color": "#8A8A8A",
-                        "--active-dot-size": "6px",
-                        "--dot-size": "6px",
-                        "--dot-border-radius": "6px",
-                        "--dot-spacing": "4px",
-                        position: "absolute",
-                        right: "calc(45vw - 1.5rem)"
-                    }}}
+                <Swiper
+                    spaceBetween={16}
+                    modules={[Pagination, Navigation, A11y]}
+                    navigation={true}
+                    pagination={{clickable: false}}
                 >
-                    <Swiper.Item className={styles.swiperItem}>
-                        <NewsArticle    
-                            title={news[0].title}
-                            preview={news[0].preview}
-                            img={news[0].img}
-                        />
-                        <NewsArticle    
-                            title={news[1].title}
-                            preview={news[1].preview}
-                            img={news[1].img}
-                        />
-                    </Swiper.Item>
-                    <Swiper.Item className={styles.swiperItem}>
-                        <NewsArticle    
-                            title={news[2].title}
-                            preview={news[2].preview}
-                            img={news[2].img}
-                        />
-                        <NewsArticle  
-                            title={news[3].title}
-                            preview={news[3].preview}
-                            img={news[3].img}
-                        />
-                    </Swiper.Item>
+                    <SwiperSlide>
+                        <div className={styles.swiperItem}>
+                            <NewsArticle    
+                                title={news[0].title}
+                                preview={news[0].preview}
+                                img={news[0].img}
+                            />
+                            <NewsArticle    
+                                title={news[1].title}
+                                preview={news[1].preview}
+                                img={news[1].img}
+                            />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={styles.swiperItem}>
+                            <NewsArticle    
+                                title={news[2].title}
+                                preview={news[2].preview}
+                                img={news[2].img}
+                            />
+                            <NewsArticle  
+                                title={news[3].title}
+                                preview={news[3].preview}
+                                img={news[3].img}
+                            />
+                        </div>
+                    </SwiperSlide>
                 </Swiper>
             </div>
             <div className={styles.arrows}>

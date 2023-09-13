@@ -23,11 +23,7 @@
 .arrows {
     display: flex;
     gap: 1rem;
-    position: relative;
-    right: 1.25rem;
-    bottom: 2.15rem;
     justify-content: flex-end;
-
 }
 
 .swiperItem {
