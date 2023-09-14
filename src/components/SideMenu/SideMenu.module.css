@@ -42,10 +42,3 @@
 .MuiAccordionroot::before {
     display: none;
 }
-
-.wecoffeLink {
-    font-size: 1rem;
-    color: #0D98E6;
-    font-weight: 600;
-    padding-left: 1rem;
-}

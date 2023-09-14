@@ -12,7 +12,7 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.logo}>
                 <BiggerLogo/>
-                <p>©2023 Wecode Tecnologia para e-commerce ltda. Todos os direitos reservados.</p>
+                <p>©2023 Wecode Tecnologia para e-commerce ltda. <br/> Todos os direitos reservados.</p>
             </div>
             <div className={styles.linkList}>
                 <h4>Conecte-se conosco</h4>
@@ -26,29 +26,29 @@ const Footer = () => {
             </div>
             <div className={styles.linkList}>
                 <h4>Sobre a empresa</h4>
-                <a>Quem somos</a>
-                <a>Fale conosco</a>
-                <a>Produção Nacional de Café</a>
+                <button className={styles.linkButton}>Quem somos</button>
+                <button className={styles.linkButton}>Fale conosco</button>
+                <button className={styles.linkButton}>Produção Nacional de Café</button>
             </div>
             <div className={styles.linkList}>
                 <h4>E-mail</h4>
-                <a>ola@wecode.digital</a>
+                <button className={styles.linkButton}>ola@wecode.digital</button>
             </div>
             <div className={styles.linkList}>
                 <h4>Telefone</h4>
-                <a>+55 (54) 3028-9452</a>
+                <button className={styles.linkButton}>+55 (54) 3028-9452</button>
             </div>
             <div className={styles.linkList}>
                 <h4>Endereço</h4>
-                <a>Rua Independência, 2432 - sala 418 <br/>
-                    Caxias do Sul, RS - 95.082-380</a>
+                <button className={styles.linkButton}>Rua Independência, 2432 - sala 418 <br/>
+                    Caxias do Sul, RS - 95.082-380</button>
             </div>
             <div className={styles.linkList}>
                 <h4>Políticas</h4>
-                <a>Política de Privacidade</a>
-                <a>Termos de uso</a>
-                <a>Política de Entrega</a>
-                <a>Política de Cupom e Descontos</a>
+                <button className={styles.linkButton}>Política de Privacidade</button>
+                <button className={styles.linkButton}>Termos de uso</button>
+                <button className={styles.linkButton}>Política de Entrega</button>
+                <button className={styles.linkButton}>Política de Cupom e Descontos</button>
             </div>
         </footer>
     )

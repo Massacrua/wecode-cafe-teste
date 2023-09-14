@@ -62,10 +62,10 @@ const SideMenu = props => {
                     <AccordionDetails>
                         <Typography sx={typographyStyle} component={"ul"}>
                             <ul>
-                                <li><a>Café Cyborg</a></li>
-                                <li><a>Café Star Wars</a></li>
-                                <li><a>Café Dark Elf</a></li>
-                                <li><a>Ver todos</a></li>
+                                <li><button className="linkButtonSmall">Café Cyborg</button></li>
+                                <li><button className="linkButtonSmall">Café Star Wars</button></li>
+                                <li><button className="linkButtonSmall">Café Dark Elf</button></li>
+                                <li><button className="linkButtonSmall">Ver todos</button></li>
                             </ul>
                         </Typography>
                     </AccordionDetails>
@@ -89,8 +89,8 @@ const SideMenu = props => {
                     <AccordionDetails>
                         <Typography sx={typographyStyle} component={"ul"}>
                             <ul>
-                                <li><a>Café preto</a></li>
-                                <li><a>Café com leite</a></li>
+                                <li><button className="linkButtonSmall">Café preto</button></li>
+                                <li><button className="linkButtonSmall">Café com leite</button></li>
                             </ul>
                         </Typography>
                     </AccordionDetails>
@@ -114,13 +114,18 @@ const SideMenu = props => {
                     <AccordionDetails>
                         <Typography sx={typographyStyle} component={"ul"}>
                             <ul>
-                                <li><a>Kit energético</a></li>
-                                <li><a>Kit de chás especiais</a></li>
+                                <li><button className="linkButtonSmall">Kit energético</button></li>
+                                <li><button className="linkButtonSmall">Kit de chás especiais</button></li>
                             </ul>
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
-                <a className={styles.wecoffeLink}>Wecoffee Club+</a>
+                <button 
+                    className="linkButton" 
+                    style={{paddingLeft: "1rem"}}
+                >
+                    Wecoffee Club+
+                </button>
             </div>
         </Menu>
     )

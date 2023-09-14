@@ -15,17 +15,22 @@
     font-size: 1rem;
 }
 
-.footer a {
-    color: #FFF;
+.linkButton {
+    font-family: Raleway;
     font-size: 0.875rem;
     font-weight: 400;
+    color: #FFF;
+    background-color: transparent;
+    border: none;
     text-decoration: underline;
+    text-align: left;
 }
 
 .logo {
     display: flex;
     text-align: center;
     flex-direction: column;
+    align-self: center;
     align-items: center;
     gap: 1.5rem;
 }
