@@ -35,7 +35,7 @@ const SideMenu = props => {
                 <BlackLogo/>
             </div>
             <div className={styles.banner}>
-                <img src={require("assets/jogando-videogame.png")}/>
+                <img src={require("assets/jogando-videogame.png")} alt="Foto de um homem jogando videogame."/>
                 <div>
                     <h3>Café Gamer</h3>
                     <p>Perfeito para aquela madrugada de lançamento de jogo novo</p>

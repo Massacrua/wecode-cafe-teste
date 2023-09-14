@@ -4,15 +4,20 @@ import SectionSubtitle from "components/SectionSubtitle"
 import NewsArticle from "components/NewsArticle"
 import { ReactComponent as ArrowLeft } from "assets/arrow-left.svg"
 import { ReactComponent as ArrowRight } from "assets/arrow-right.svg"
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Navigation, A11y } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "./SwiperStyle.css"
+import { useRef } from "react"
 
 const NewsSection = () => {
+
+    const navTestePrev = useRef(null)
+    const navTesteNext = useRef(null)
+
     const news = [
         {
             id: 0,
@@ -50,8 +55,11 @@ const NewsSection = () => {
                 <Swiper
                     spaceBetween={16}
                     modules={[Pagination, Navigation, A11y]}
-                    navigation={true}
                     pagination={{clickable: false}}
+                    navigation={{
+                        prevEl: navTestePrev.current,
+                        nextEl: navTesteNext.current
+                    }}
                 >
                     <SwiperSlide>
                         <div className={styles.swiperItem}>
@@ -84,8 +92,8 @@ const NewsSection = () => {
                 </Swiper>
             </div>
             <div className={styles.arrows}>
-                <ArrowLeft />
-                <ArrowRight />
+                <ArrowLeft ref={navTestePrev}/>
+                <ArrowRight ref={navTesteNext}/>
             </div>
         </section>
     )

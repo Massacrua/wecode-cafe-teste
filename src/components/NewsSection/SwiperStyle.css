@@ -1,12 +1,13 @@
-.swiper-pagination-horizontal {
-    outline: 1px red solid;
+.swiper-pagination {
+    text-align: left;
+    --swiper-pagination-bullet-size: 6px;
+    --swiper-pagination-bottom: 0px;
 }
 
 .swiper-pagination-bullet {
+    --swiper-pagination-bullet-horizontal-gap: 2px;
     background-color: #8A8A8A;
     opacity: 100%;
-    width: 6px;
-    height: 6px;
 }
 
 .swiper-pagination-bullet-active {
@@ -14,11 +15,14 @@
 }
 
 .swiper-button-prev {
+    color: #181818;
     outline: 1px red solid;
-
+    --swiper-navigation-size: 1rem;
 }
 
 .swiper-button-next {
+    color: #181818;
     outline: 1px red solid;
+    --swiper-navigation-size: 1rem;
 
 }
