@@ -15,8 +15,8 @@ import { useRef } from "react"
 
 const NewsSection = () => {
 
-    const navTestePrev = useRef(null)
-    const navTesteNext = useRef(null)
+    const navArrowPrev = useRef(null)
+    const navArrowNext = useRef(null)
 
     const news = [
         {
@@ -57,8 +57,8 @@ const NewsSection = () => {
                     modules={[Pagination, Navigation, A11y]}
                     pagination={{clickable: false}}
                     navigation={{
-                        prevEl: navTestePrev.current,
-                        nextEl: navTesteNext.current
+                        prevEl: navArrowPrev.current,
+                        nextEl: navArrowNext.current
                     }}
                 >
                     <SwiperSlide>
@@ -92,8 +92,8 @@ const NewsSection = () => {
                 </Swiper>
             </div>
             <div className={styles.arrows}>
-                <ArrowLeft ref={navTestePrev}/>
-                <ArrowRight ref={navTesteNext}/>
+                <ArrowLeft ref={navArrowPrev}/>
+                <ArrowRight ref={navArrowNext}/>
             </div>
         </section>
     )

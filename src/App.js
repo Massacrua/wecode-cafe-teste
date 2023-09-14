@@ -16,7 +16,7 @@ function App() {
     setShoppingCart([...shoppingCart, product])
   }
 
-  const [scrolledDown, setScrolledDown] = useState()
+  const [scrolledDown, setScrolledDown] = useState(false)
   useEffect(() => {
       const handleScroll = () => {
           window.scrollY 
